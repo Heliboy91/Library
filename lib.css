@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+body {
+    background: black;
+    max-width: 100%;
+}
+
+.menu {
+    display: flex;
+    gap: 18px;
+    top: 0px;
+    left: 5px;
+    position: absolute;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    color: white;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    
+}
+
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+#length {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+
+
+.Form {
+    position: absolute;
+    width: 50%;
+    animation-name: showBook;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    flex-direction: column;
+    display: none;
+    top: 25%;
+    left: 25%;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    z-index: 2;
+} 
+
+.feedback {
+    height: 60px;
+    width: 40px;
+    position: absolute;
+    z-index: 3;
+    outline: 2px solid rgb(190, 190, 194);
+    top: 5%;
+    right: 50%;
+    border-radius: 7px;
+    padding: 1px;
+    overflow: hidden;
+    background: white;
+    color: black;
+    animation-name: feedback;
+    animation-duration: 1s;
+    animation-iteration-count: 1s;
+    opacity:0;
+}
+
+@keyframes feedback {
+  
+
+   50% {
+    
+    transform: translateY(-100px);
+    opacity: 1; 
+    display: block;
+
+   }
+
+   100% {
+    
+    transform: translateY(-100px);
+    opacity:0;
+    display: none;
+   }
+}
+
+#readIt {
+    outline: none;
+    accent-color: green;
+}
+
+.options {
+    color: black;
+    background: white;
+    display: none;
+    flex-direction: column;
+    width: 15%;
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    animation-name: showBook;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+   
+   
+}
+
+.options input {
+    outline: none;
+    accent-color: green;
+
+}
+
+.options label {
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    height: 100%;
+    width: 80%;
+    font-size: 0.9rem;
+}
+
+.radioDiv {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radioDiv:hover {
+    background-color: rgb(239, 239, 240);
+}
+
+#close {
+    position: absolute;
+    right: 5px;
+    top: -6%;
+    padding: 2px 2px;
+    width: 20px;
+    height: 20px;
+    background: rgb(114, 114, 114);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#close:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 10px auto;
+    
+    width: 50%
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    color: white;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.subdiv {
+    padding: 15px;
+    align-items: center;
+    width: 40vw;
+    outline: 1px solid white;
+    border-radius: 6px;   
+}
+
+.subdiv p {
+    background: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-bottom: 10px;
+    height:30px;
+
+}
+
+.book {
+    display: flex;
+    min-width: 150px;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+    border-radius: 10px;
+    outline: 1px solid white;
+    animation-name: showBook;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+
+
+}
+
+@keyframes showBook {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.removeButton {
+    background: white;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+    
+
+}
+
+
+
+
+
+input {
+    background: none;
+    border: none;
+    outline: 2px solid rgb(218, 215, 215);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 2px;
+}
+
+
+
+
+button {
+    border: none;
+    outline: 1px solid white;
+    color: white;
+    background: none;
+    padding: 7px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 30px;
+    border-radius: 7px;
+    width: 120px;
+    transition: 0.2s;
+    
+}
+
+button:hover {
+    outline: 3px solid;
+}
+
+#createObject {
+    color: black;
+    outline: 1px solid black;
+    transition: 0.2s;
+}
+
+#createObject:hover{
+    outline: 3px solid;
+}
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="lib.css">
+    
+</head>
+<body>
+    <div class="menu">
+        <button id="add">+ New book</button>
+        <button id="sort">Sort by...</button> 
+        <button id="all">Show all</button>
+    </div>
+    <div class="options">
+        <div class="sortingOptions">
+           
+            <div class="radioDiv">
+                <label for = "aut">Author</label>
+                <input type="radio" name="sortBy" id = "aut" value="author">
+            </div>
+            <div class="radioDiv">
+                <label for="tit">Title</label>
+                <input type="radio" id="tit" name="sortBy" value="title">
+            </div>
+            <div class="radioDiv">
+                <label for="re">Read Status</label>
+                <input type="radio" id="re" name="sortBy" value="readStatus">
+            </div>
+        </div>
+    </div>
+    
+    <h1>Library</h1>
+    <div id="length">
+        <span>Number of books:</span>
+        <span id="number"></span>
+    </div>
+    
+    <div class="Form">
+        <h2>Add new book</h2>
+        <button id="close">x</button>
+        <div class="details">
+            <label for="author">Author</label>
+            <input type="text" id="author">
+        </div>
+        <div class="details">
+           <label for="title">Title</label> 
+           <input type="text" id="title">
+        </div>
+        <div class="details">
+            <label for="pages">Pages</label>
+            <input type="text" id="pages">
+        </div>
+        <div class="details">
+            <label for="readIt">Read it</label>
+            <input type="checkbox" id="readIt">
+        </div>
+       
+        <button id="createObject">Add book</button>
+    </div>
+    <div id="container">
+       
+    </div>
+</body>
+<script src="lib.js" defer></script>
+</html>

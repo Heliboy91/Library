@@ -230,7 +230,7 @@ for(i=0; i < radioDivs.length; i++) {
 }
 
 
-
+/*
 
 //creating a Book object
 function Book(author,title,pages,read) {
@@ -241,6 +241,19 @@ this.pages = pages;
 this.id = libraryLength;
 this.read = read;
 }
+
+*/
+
+class Book{
+    constructor(author,title,pages,read){
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.id = libraryLength;
+        this.read = read;
+    }
+}
+
 
 //Add book to array
 function addBookToLibrary() {
